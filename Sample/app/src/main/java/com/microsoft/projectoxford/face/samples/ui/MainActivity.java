@@ -39,6 +39,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.microsoft.projectoxford.face.samples.R;
+import com.microsoft.projectoxford.face.samples.camera.CameraActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -77,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void identification(View view) {
         Intent intent = new Intent(this, IdentificationActivity.class);
+        startActivity(intent);
+    }
+
+    public void openFaceDetectionCamera(View view) {
+        Intent intent = new Intent(this, CameraActivity.class);
         startActivity(intent);
     }
 }
